@@ -1,0 +1,34 @@
+<br>
+<div class="container" style="background-image:url('https://images.pexels.com/photos/305816/pexels-photo-305816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+
+    <h2 class="p-3 mb-2 bg-transparent text-white">Crear Proyecto</h2>
+    <form id="create_projects" method="get" action="/projects/created">
+        <div class="form-group">
+            <label for="name" class="table-dark">Nombre</label>
+            <input name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="description" class="table-dark">Descripcion</label>
+            <input name="description" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="start" class="table-dark">Fecha Comienzo</label>
+            <input name="start" type="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="end" class="table-dark">Fecha Término</label>
+            <input name="end" type="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="state" class="table-dark">Estado</label>
+            <select name="state" id="" class="form-control">
+                <option value="Propuesta">Propuesta</option>
+                <option value="En Progreso">En Progreso</option>
+                <option value="Terminado">Terminado</option>
+            </select>
+        </div>
+      <br>
+      <button type="submit" class="btn btn-dark btn-sm ml-3">Crear</button>
+      <button type="submit" class="btn btn-warning btn-sm"><%= link_to "Volver a Proyectos", projects_dashboard_path%></button>
+    </form>
+</div>

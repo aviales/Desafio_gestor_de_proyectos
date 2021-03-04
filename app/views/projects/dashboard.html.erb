@@ -1,0 +1,46 @@
+<br>
+
+<div class="container" style="background-image:url('https://images.pexels.com/photos/4942113/pexels-photo-4942113.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+    <h3 class="text-white bg-transparent">Crear un nuevo proyecto</h3>
+    <button type="submit" class="btn btn-dark btn-sm"><%= link_to "Crear un proyecto", projects_new_project_path%></button>
+</div>
+<br>
+<div class="container" style="background-image:url('https://images.pexels.com/photos/4942113/pexels-photo-4942113.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+    <h3 class="text-white bg-transparent">Filtrar proyectos por estado</h3>
+    <form>
+        <select name="state">
+            <option value="Propuesta">Propuesta</option>
+            <option value="En Progreso">En Progreso</option>
+            <option value="Terminado">Terminado</option>
+        </select>
+    <button type="submit" class="btn btn-dark btn-sm ml-3">Filtrar</button>
+    </form>     
+</div>   
+
+<br>
+   
+<div class="container" style="background-image:url('https://images.pexels.com/photos/4942113/pexels-photo-4942113.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');">
+    <h1 class="text-white bg-transparent">Proyectos</h1>
+    
+    <table class="table">
+        <tr class="text-white bg-transparent">
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Fecha de comienzo</th>
+            <th>Fecha de término</th>
+            <th>Estado</th>
+        </tr>
+        <% @projects.each do |project| %>
+            <tr class="text-white bg-transparent">
+                <td><strong><%= project.name %></strong></td>
+                <td class="text-justify"><strong><%= project.description %></strong></td>
+                <td><strong><%= project.start %></strong></td>
+                <td><strong><%= project.end %></strong></td>
+                <td><strong><%= project.state %></strong></td>
+            </tr>
+        <% end %>
+    </table>
+    <br>
+</div>
+
+
